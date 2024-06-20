@@ -14,6 +14,11 @@ app.post('/upload', upload.single('file'), (req, res) => {
   res.json({ file: req.file });
 });
 
+app.post('/multiple', upload.array('files'), (req, res) => {
+  res.json({ file: req.files });
+});
+
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   if (err) {

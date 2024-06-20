@@ -1,19 +1,25 @@
 <template>
 <div class="section">
   <div class="container">
-    
+    <div class="columns">
+      <div class="column">
+        <simple-upload />
+      </div>
 
-    <simple-upload />
-
+      <div class="column">
+        <multiple-upload />
+      </div>
+    </div>
   </div>
 </div>
 </template>
 
 <script>
-  import simpleUpload from './simpleUpload.vue';
+  import simpleUpload from './components/simpleUpload.vue';
+  import multipleUpload from './components/multipleUpload.vue';
   export default {
     name: "App",
-    components: {simpleUpload}
+    components: {simpleUpload, multipleUpload}
   }
 </script>
 
